@@ -2,3 +2,43 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+li{
+    color:#B88B4A;
+    font-size:19px;
+    border: 3px #B88B4A solid;
+    width: 15vw;
+    background-color: #533E2D;
+    border-radius: 10px;
+    margin: 10px;
+    list-style-type: none;
+    padding: 8px;
+}
+
+button{
+    background-color:#A27035;
+    color: #242331;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: 3px solid #B88B4A;
+    margin: 8px;
+}
+
+.Data{
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+h5{
+    text-align: left;
+}
+
+h3{
+    text-align: left;
+}
+
+.Header{
+    display: flex;
+    align-items: center;
+    padding: 48px;
+}

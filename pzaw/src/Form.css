@@ -1,11 +1,12 @@
 .AddToDo{
-    border: solid 1px black;
+    border: solid 3px #B88B4A;
     width: 30vw;
     border-radius: 10px;
     height: 20vh;
+    background-color: #533E2D;
+    color: #B88B4A;
 }
 
-p{
-    text-align: left;
+label{
+    font-size: 2rem;
 }
-
