@@ -9,9 +9,9 @@ const ustawDate=(data)=>{
 
 }
 const tasks=[
-    {id: 1, text:'Zadanie1', completed: false, data: ustawDate(data)},
+    {id: 1, text:'Zadanie1', completed: true, data: ustawDate(data)},
     {id: 2, text:'Zadanie2', completed: true, data: ustawDate(data)},
-    {id: 3, text:'Zadanie3', completed: false, data: ustawDate(data)}
+    {id: 3, text:'Zadanie3', completed: true, data: ustawDate(data)}
 ]
 
 
@@ -48,13 +48,15 @@ const ToDo =()=> {
 
     return(
         <div>
+            <Form name={setNazwa} description={setOpis}/>
             <h1>
-            <button className="Add" onClick={()=>newTaskHandler()}>dodaj zadanie</button>
+            <button className="Add" onClick={()=>newTaskHandler()}>dodaj nowe zadanie</button>
                 <ul className="Lista">
                     {
                         todos.map( task => (
                             <li style={{color:"023047", fontSize:'19px', marginBottom:'10px', border: '1px black solid', width: '20vw'}}>
-                                <h5>zadanie {task.id}</h5>
+                                <h2>zadanie {task.id}</h2>
+                                <h5> {task.opis}</h5>
                                 {task.text}<br/>data:{task.data}
                             <br/>
                             <button onClick={()=>removeTaskHandler(task.id)}>usuń zadanie {task.id}</button>
@@ -64,7 +66,6 @@ const ToDo =()=> {
                     }
                     
                 </ul>
-                <Form name={setNazwa} description={setOpis}></Form>
             </h1>
         </div>
     );

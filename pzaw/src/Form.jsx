@@ -21,7 +21,7 @@ const Form =({name, description})=> {
 
     return(
         <div>
-            dodaj nowe zadanie
+            <p>Dodaj nowe zadanie</p>
             <div className="AddToDo">
                 <label>nazwa</label><input type="text" onChange={sendNazwa}  id="1"/><br/>
                 <label>opis</label><input type="text" onChange={sendOpis}  id="2"/><br/>              
