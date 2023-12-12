@@ -1,24 +1,30 @@
 import React from "react";
+import { useState } from "react";
 import './Form.css'
 
-const Form =()=> {
+const Form =({name, description})=> {
 
-    const newTaskHandler =()=>{
-             const newTask={
-            
-             }
-        }
+    const [nazwa, setNazwa]= useState('')
+    const [opis, setOpis]= useState('')
 
-        let data= new Date()
+    const sendNazwa=(event)=>{
+        setNazwa(event.target.value)
+       name(event.target.value)
+
+    }
+    const sendOpis=(event)=>{
+        setOpis(event.target.value)
+        description(event.target.value)
+    }
+
     
 
     return(
         <div>
             dodaj nowe zadanie
             <div className="AddToDo">
-                <label>nazwa</label><input type="text"/><br/>
-                <label>opis</label><input type="text"/><br/>              
-                <button onClick={()=>newTaskHandler()}>dodaj zadanie</button>
+                <label>nazwa</label><input type="text" onChange={sendNazwa}  id="1"/><br/>
+                <label>opis</label><input type="text" onChange={sendOpis}  id="2"/><br/>              
                 
                 
                 
